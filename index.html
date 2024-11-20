@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Ignacio García Vallejos</title>
+    <link rel="icon" href="imagenes/logo_pagina.jpg" type="img/jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #d3ebf0;
+            color: rgb(7, 9, 121);
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        /* Con esto el texto ocupa el 60% del espacio */
+        .texto {
+            width: 60%;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        /* Coloca la imagen a la derecha y alinea en la parte superior */
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        /* Aplicamos este código para el tamaño de la imagen, mantiene proporción y agrega un espacio con el borde derecho.*/
+        .img-derecha {
+            max-width: 525px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /*Aplicamos una sombra ligera, bordes redondeados, aumentamos el tamaño del texto, eliminamos subrayado, alineamos texto, etc. */
+        .formulario-contacto {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #171717;
+            background-color: #769ec9;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(232, 57, 57, 0.3);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Aplicamos color, tamaño y le quitamos el subrayado al botón del enlace  */
+        .formulario-contacto a {
+            font-size: 16px;
+            color: #567573;
+            text-decoration: none;
+        }
+
+        /* Estilos para la tabla dentro del div tabla-renting, en la cual centramos el texto, centramos el título, 
+        damos formato al texto, bordes colapsados para un diseño limpio, usamos todo el ancho disponible.*/
+        .plan-renting,
+        .plan-renting table,
+        .plan-renting h2 {
+            margin: 20px auto;
+            max-width: 600px;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            color: #161515;
+            margin-bottom: 10px;
+        }
+
+        /* Aplicamos color a los bordes, encabezado, agregamos un espacio interno.*/
+        .plan-renting td {
+            border: 1px solid #5e5555;
+            padding: 10px;
+        }
+
+        /*Agregamos color al fondo y cambiamos de color el texto.*/
+        .plan-renting th {
+            background-color: #5e4304;
+            color: whitesmoke;
+
+        }
+
+        /* Permite agregar color a las filas*/
+        .plan-renting tr:nth-child(even),
+        .plan-renting tr:nth-child(odd) {
+            background-color: #eff6fa;
+        }
+
+        /* Este código hace que al pasar el mouse por la tabla cambie de color.*/
+        .plan-renting tr:hover {
+            background-color: #ddf2f1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Renting de Vehículos</h1>
+        <h2>Somos la mejor opción del mercado.</h2>
+    </header>
+    <main>
+        <div class="contenido">
+            <div class="texto">
+                <p><b>En nuestro renting de vehículos</b>, ofrecemos <i>soluciones personalizadas</i>para particulares
+                    y empresas. ¡Disfruta de conducir <u>sin complicaciones</u>!</p>
+                <h2>Por qué deberías elegirnos?</h2>
+                <ul>
+                    <li>Flota de Vehículos modernos y seguros.</li>
+                    <li>Mantenimientos incluidos.</li>
+                    <li>Planes flexibles adaptados a tus necesidades.</li>
+                </ul>
+                <h2>Nuestros Servicios</h2>
+                <ol>
+                    <li>Alquiler a corto y largo plazo.</li>
+                    <li>Asesoramiento personalizado.</li>
+                    <li>Flota nueva.</li>
+                    <li>Flota ecológica de vehículos híbridos y eléctricos.</li>
+                </ol>
+            </div>
+            <div class="contenedor">
+                <a href="imagenes/vehiculo.jpg">
+                    <img src="imagenes/vehiculo.jpg" alt="Imagen pequeña" class="img-derecha">
+                </a><br />
+                <a href="formulario/formulario.html" class="formulario-contacto">Realiza tu reserva</a>
+            </div>
+        </div>
+        <div class="plan-renting">
+            <h2>Planes de Renting</h2>
+            <table>
+                <tr>
+                    <th>Tipo de Vehículo</th>
+                    <th>Precio Mensual</th>
+                    <th>Duración del Contrato</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Coche Compacto</td>
+                    <td>300€</td>
+                    <td>12 meses</td>
+                </tr>
+                <tr>
+                    <td>280€</td>
+                    <td>24 meses</td>
+                </tr>
+                <tr>
+                    <td colspan="2">SUV (Plan Especial)</td>
+                    <td>36 meses</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    </main>
+    </div>
+    <!-- Busque un video que no es de un renting, use un video de coches.net al inicio tuve problemas para poder agregar al video, 
+     pero investigando encontré que al dar compartir en youtube y después en insertar te genera un iframe con toda la dirección 
+     para que el video se pueda visualizar en la página sin necesidad de redireccionarme a youtube.-->
+    <h2>Contenido Multimedia</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o8zii_xVXvI?si=9Z9IHONKEg2mb9QB"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- También se me presento el mismo problema en Google Maps, marque un punto seleccione en compartir y después en insertar
+         un mapa-->
+    <h2>Nuestra Ubicación</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d263.52794629580524!2d-0.871572520699062!3d41.64540539400732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914f98342ddb3%3A0x773833a8378042e9!2sC.%20de%20Miguel%20Servet%2C%2062%2C%2050013%20Zaragoza!5e0!3m2!1ses!2ses!4v1732140495786!5m2!1ses!2ses"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <hr />
+    <footer>
+        <!-- Se utiliza el atributo style solo para darle color a este texto sin modificar el color a otro párrafo-->
+        <p>Creado por José Ignacio García Vallejos. Última actualización: 20 de Noviembre de 2024.</p>
+    </footer>
+</body>
+
+</html>

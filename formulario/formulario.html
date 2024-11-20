@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Ignacio García Vallejos</title>
+    <style>
+        /* Aplicamos cambios en el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b3dde9;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            background: #3b8069;
+            padding: 20px;
+            margin: 0 auto;
+            border: 1px solid #96d3d9;
+            border-radius: 5px;
+            max-width: 500px;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #94e5f7;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #edf1f5;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .promo-terminos, label {
+        display: flex;
+        align-items:center;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cefd76;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1b6391;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form>
+        <!-- Utilizamos fieldset y legend como se indica en la tarea fieldset nos permite dividir por grupos los datos del formulario -->
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </fieldset>
+
+        <!-- Sección de consulta sobre renting -->
+        <fieldset>
+            <legend>Consulta sobre Renting</legend>
+            <label for="tipo_vehiculo">Tipo de Vehículo de Interés:</label>
+            <!--Le permitimos al cliente que pueda realizar su elección del vehículo que quiere contratar.-->
+            <select id="tipo_vehiculo" name="tipo_vehiculo" required>
+                <option value="">Selecciona un tipo</option>
+                <option value="compacto">Coche Compacto</option>
+                <option value="suv">SUV Combustión</option>
+                <option value="electrico">SUV Eléctrico</option>
+            </select>
+            <label for="duracion">Duración del Renting (meses):</label>
+            <input type="number" id="duracion" name="duracion" placeholder="Introduce la duración en meses (mínimo 12)"
+                min="12" required>
+
+            <label for="mensaje">Mensaje o Consulta:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tus dudas o consultas"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <!-- Agrego div para que sea más fácil poder aplicarle css sin afectar otros elementos.-->
+            <div class="promo-terminos">
+                <input type="checkbox" id="recibir_ofertas" name="recibir_ofertas">
+                <label>Deseo recibir ofertas especiales y promociones.</label>
+                <!--Le agregamos requerido para que sea un campo obligatorio de marcar-->
+                <input type="checkbox" id="acepto_terminos" name="acepto_terminos" strequired>
+                <label>Acepto los términos y condiciones.</label>
+        </div>
+        </fieldset>
+
+        <!--Agregamos los botones de acción como se indica en la tarea uno de ellos indicando que envía la consulta y el otro utilizando un type reset 
+        para que elimine todos los datos agregados en los campos de textos o selección.-->
+        <button type="submit">Enviar Consulta</button>
+        <button type="reset">Reiniciar Formulario</button>
+    </form>
+</body>
+</html>
